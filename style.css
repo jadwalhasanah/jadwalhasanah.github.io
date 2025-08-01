@@ -1,117 +1,126 @@
+/* Reset dasar */
 body {
-  background-image: url("main-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-  cursor: none;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  font-family: sans-serif;
+  background-color: #000;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
 }
 
-@font-face {
-  font-family: digital7;
-  src: url("digital-7.woff");
-}
-
+/* Header */
 .header {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #000;
   padding: 20px 40px;
   text-align: center;
+  opacity: 0.8;
+  color: #fff;
 }
 
 .hari, .tgl {
-  color: #fff;
-  font-size: 40px;
-  text-shadow: 0 0 6px #000;
-}
-
-.jam {
-  font-family: digital7;
-  font-size: 90px;
-  color: #fff;
-  text-shadow: 0 0 20px #fff;
-  letter-spacing: 5px;
-}
-
-.jam2 {
-  font-family: digital7;
-  font-size: 60px;
-  color: #000;
-}
-
-h3 {
   font-size: 36px;
   font-weight: bold;
 }
 
-/* Gambar logo dan ikon waktu salat */
-img {
-  max-width: unset !important;
-  height: auto;
+.jam {
+  font-size: 60px;
+  font-weight: bold;
 }
 
+/* Logo */
 .header img {
-  width: 140px;
-  height: 140px;
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
 }
 
-.col-sm img {
-  width: 80px;
-  height: 80px;
-}
-
-/* Modal */
+/* Modal Azan */
 .modal-content {
-  background-color: #0f0;
-  color: white;
+  background-color: #111;
+  color: #fff;
+  text-align: center;
 }
 
-.modal-header {
-  background-color: #0f0;
-  color: white;
-  text-align: center;
-  font-size: 32px;
+.modal-content h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
 }
 
 .modal-body img {
-  width: 300px;
+  width: 100%;
+  max-width: 500px;
   height: auto;
+  object-fit: contain;
 }
 
-/* Footer (Waktu Sholat) */
+/* Waktu Sholat Box */
 .footer {
+  padding: 20px 10px 100px 10px;
+}
+
+.footer .row {
+  justify-content: center;
+}
+
+.footer .col-sm {
+  background-color: #111;
+  border-radius: 20px;
   padding: 20px;
-  position: fixed;
-  bottom: 60px;
-  width: 100%;
-  z-index: 10;
+  min-width: 150px;
+  transition: none !important;
 }
 
-.col-sm {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-  padding: 10px 0;
+.footer .col-sm h3 {
+  font-size: 36px;
+  margin: 15px 0 10px;
 }
 
-/* Running Text */
+.footer .col-sm h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.jam2 {
+  font-size: 48px;
+}
+
+/* Ikon Sholat */
+.footer img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+}
+
+/* Running Text (Teks Berjalan) */
 .runtext-container {
-  width: 100%;
-  background-color: #222;
   position: fixed;
   bottom: 0;
-  left: 0;
-  z-index: 1000;
+  width: 100%;
+  background-color: #222;
+  color: #fff;
   padding: 10px 0;
-  opacity: 0.9;
+  font-size: 36px;
+  font-weight: bold;
+  z-index: 9999;
 }
 
 .runtext-container marquee {
-  font-size: 40px;
-  font-weight: bold;
+  white-space: nowrap;
+}
+
+.runtext-container a {
   color: #fff;
-  text-shadow: 1px 1px 2px #000;
-  }
+  text-decoration: none;
+}
+
+/* Responsive Fixes */
+@media screen and (max-width: 1024px) {
+  .jam { font-size: 48px; }
+  .hari, .tgl { font-size: 28px; }
+  .footer .col-sm h3 { font-size: 28px; }
+  .footer .col-sm h1, .jam2 { font-size: 36px; }
+  .runtext-container { font-size: 28px; }
+}
