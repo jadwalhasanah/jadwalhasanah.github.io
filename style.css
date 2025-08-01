@@ -4,8 +4,10 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  cursor: none;
+  cursor: none; /* Sembunyikan kursor */
   margin: 0;
+  padding: 0;
+  overflow-x: hidden;
   font-family: sans-serif;
 }
 
