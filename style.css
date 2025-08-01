@@ -4,7 +4,7 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  cursor: none; /* Sembunyikan kursor */
+  cursor: none;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -24,13 +24,13 @@ body {
 
 .hari, .tgl {
   color: #fff;
-  font-size: 38px;
+  font-size: 40px;
   text-shadow: 0 0 6px #000;
 }
 
 .jam {
   font-family: digital7;
-  font-size: 80px;
+  font-size: 90px;
   color: #fff;
   text-shadow: 0 0 20px #fff;
   letter-spacing: 5px;
@@ -47,19 +47,20 @@ h3 {
   font-weight: bold;
 }
 
-.footer {
-  padding: 20px;
-  position: fixed;
-  bottom: 60px;
-  width: 100%;
-  z-index: 10;
+/* Gambar logo dan ikon waktu salat */
+img {
+  max-width: unset !important;
+  height: auto;
 }
 
-.col-sm {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-  padding: 10px 0;
+.header img {
+  width: 140px;
+  height: 140px;
+}
+
+.col-sm img {
+  width: 80px;
+  height: 80px;
 }
 
 /* Modal */
@@ -75,6 +76,27 @@ h3 {
   font-size: 32px;
 }
 
+.modal-body img {
+  width: 300px;
+  height: auto;
+}
+
+/* Footer (Waktu Sholat) */
+.footer {
+  padding: 20px;
+  position: fixed;
+  bottom: 60px;
+  width: 100%;
+  z-index: 10;
+}
+
+.col-sm {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  padding: 10px 0;
+}
+
 /* Running Text */
 .runtext-container {
   width: 100%;
@@ -88,8 +110,8 @@ h3 {
 }
 
 .runtext-container marquee {
-  font-size: 36px;
+  font-size: 40px;
   font-weight: bold;
   color: #fff;
   text-shadow: 1px 1px 2px #000;
-}
+  }
