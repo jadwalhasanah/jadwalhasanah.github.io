@@ -4,90 +4,101 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  cursor: none;
-  margin: 0;
-  font-family: sans-serif;
+  cursor: none; /* hide cursor */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #000;
 }
 
 @font-face {
   font-family: digital7;
-  src: url("digital-7.woff");
+  src: url(digital-7.woff);
 }
 
 .header {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 20px 40px;
+  background-color: #000;
+  padding: 10px 40px;
+  text-align: center;
+  opacity:0.7;
+}
+.tanggal-tengah {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.hari, .tgl {
+.tanggal,
+.hijriah {
+  font-size: clamp(30px, 2.2vw, 30px);
   color: #fff;
-  font-size: 38px;
-  text-shadow: 0 0 6px #000;
+  text-shadow: 0 0 8px #fff;
+  user-select: none;
 }
-
-.jam {
-  font-family: digital7;
-  font-size: 80px;
-  color: #fff;
-  text-shadow: 0 0 20px #fff;
-  letter-spacing: 5px;
-}
-
-.jam2 {
-  font-family: digital7;
-  font-size: 60px;
-  color: #000;
-}
-
-h3 {
-  font-size: 36px;
-  font-weight: bold;
+.isi {
+  padding: 200px;
+  text-align: center;
+  font-size: 35px;
 }
 
 .footer {
-  padding: 20px;
-  position: fixed;
-  bottom: 60px;
-  width: 100%;
-  z-index: 10;
+  padding: 10px;
+  text-align: center;
+  position:fixed;
+  bottom:10px;
+  width:100%;
+}
+
+.jam {
+  	font-size: 75px;
+  	font-family: digital7;
+  	text-shadow: 0 0 20px #fff;
+  	letter-spacing: 5px;
+   	color: #fff;
+   	user-select: none;
+   	opacity:1;
+}
+
+.hari {
+  	font-size: 35px;
+  	text-shadow: 0 0 8px #fff;
+   	color: #fff;
+   	user-select: none;
+}
+
+.tanggal {
+  	font-size: 25px;
+  	text-shadow: 0 0 8px #fff;
+   	color: #fff;
+   	user-select: none;
+}
+.hr-garis {
+  border: none;
+  border-top: 3px solid #fff;
+  margin: 10px 0;
+  width: 50%;
+.jam2 {
+	font-size: 55px;
+	font-family: digital7;
 }
 
 .col-sm {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-  padding: 10px 0;
+	  box-shadow: 0 34px 28px 0 rgba(0, 0, 0, 0.2), 0 26px 20px 0 rgba(0, 0, 0, 0.19);
+
+	border-radius: 12px;
 }
 
-/* Modal */
-.modal-content {
-  background-color: #0f0;
-  color: white;
-}
-
-.modal-header {
-  background-color: #0f0;
-  color: white;
-  text-align: center;
-  font-size: 32px;
-}
-
-/* Running Text */
-.runtext-container {
-  width: 100%;
-  background-color: #222;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 1000;
-  padding: 10px 0;
-  opacity: 0.9;
-}
-
-.runtext-container marquee {
-  font-size: 36px;
-  font-weight: bold;
-  color: #fff;
-  text-shadow: 1px 1px 2px #000;
-}
+<!-- Modal -->
+ .modal-content{
+ 	background-color: #0f0;
+    color:white;
+ }
+ .modal-header{
+ 	background-color: #0f0;
+    color:white;
+    text-align: center;
+    font-size: 30px;
+  }
+  
