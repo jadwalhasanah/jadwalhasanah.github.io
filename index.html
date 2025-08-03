@@ -14,6 +14,25 @@
   <script src="bootstrap.min.js"></script>
 
   <script>
+  <script>
+  const backgrounds = [
+    "main-bg.jpg",
+    "bg2.jpg",
+    "bg3.jpg",
+    "bg4.jpg"
+  ];
+
+  let currentIndex = 0;
+
+  function changeBackground() {
+    const body = document.getElementById("bg-body");
+    body.style.backgroundImage = `url('${backgrounds[currentIndex]}')`;
+    currentIndex = (currentIndex + 1) % backgrounds.length;
+  }
+
+  setInterval(changeBackground, 60000); // ganti setiap 60 detik
+  window.onload = changeBackground;
+</script>
   function checkTime(i) {
     return (i < 10) ? "0" + i : i;
   }
@@ -205,3 +224,4 @@
 
 </body>
 </html>
+
