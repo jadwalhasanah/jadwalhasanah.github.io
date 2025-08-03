@@ -15,27 +15,29 @@
 
   <!-- Blok Script Gabungan -->
 <script>
-  // Background rotator
-  const backgrounds = [
-    "img/main-bg.jpg",
-    "img/bg2.jpg",
-    "img/bg3.jpg",
-    "img/bg4.jpg",
-    "img/bg5.jpg",
-    "img/bg6.jpg"
-  ];
+ 
+    const slides = document.querySelectorAll('.bg-slide');
+  let slideIndex = 0;
 
-  let currentIndex = 0;
-
-  function changeBackground() {
-    const body = document.getElementById("bg-body");
-    body.style.backgroundImage = `url('${backgrounds[currentIndex]}')`;
-    currentIndex = (currentIndex + 1) % backgrounds.length;
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      if (i === index) {
+        slide.classList.add('active');
+      }
+    });
   }
 
-  setInterval(changeBackground, 20000); // setiap 20 detik
+  setInterval(() => {
+    showSlide(slideIndex);
+    slideIndex = (slideIndex + 1) % slides.length;
+  }, 20000); // ganti gambar setiap 20 detik
+
   window.onload = function () {
-    changeBackground();
+    showSlide(slideIndex);
+    changeBackground(); // fungsi background lama bisa dihapus kalau sudah pakai ini
+    waktuSholat();
+  };
     waktuSholat();
   };
 
@@ -139,6 +141,7 @@
   setInterval(waktuSholat, 1000);
 </script>
 
+</head>
 <body id="bg-body">
  <div class="bg-slider">
   <img src="bg1.jpg" class="bg-slide">
@@ -149,7 +152,6 @@
   <img src="bg6.jpg" class="bg-slide">
 </div>
   
-</head>
 <!-- Header -->
 <div class="header">
   <div class="row">
@@ -227,6 +229,7 @@
 
 </body>
 </html>
+
 
 
 
