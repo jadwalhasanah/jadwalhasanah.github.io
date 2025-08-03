@@ -13,8 +13,9 @@
   <script src="jquery.min.js"></script>
   <script src="bootstrap.min.js"></script>
 
-  <script>
-  <script>
+  <!-- Blok Script Gabungan -->
+<script>
+  // Background rotator
   const backgrounds = [
     "main-bg.jpg",
     "bg2.jpg",
@@ -32,9 +33,12 @@
     currentIndex = (currentIndex + 1) % backgrounds.length;
   }
 
-  setInterval(changeBackground, 60000); // ganti setiap 60 detik
-  window.onload = changeBackground;
-</script>
+  setInterval(changeBackground, 60000); // setiap 60 detik
+  window.onload = function () {
+    changeBackground();
+    waktuSholat();
+  };
+
   function checkTime(i) {
     return (i < 10) ? "0" + i : i;
   }
@@ -77,20 +81,16 @@
     const s = checkTime(today.getSeconds());
     const nowTime = `${h}:${m}`;
 
-    // Tampilkan Jam
     document.getElementById("jam").innerHTML = `${h}:${m}:${s}`;
 
-    // Tanggal Masehi
     const hari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
     const bulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli",
       "Agustus", "September", "Oktober", "November", "Desember"];
     document.getElementById("tanggal").innerHTML =
       `${hari[today.getDay()]}, ${today.getDate()} ${bulan[today.getMonth()]} ${today.getFullYear()}`;
 
-    // Tanggal Hijriah
     document.getElementById("hijriah").innerText = masehiKeHijriah(today);
 
-    // Fetch API Waktu Sholat
     try {
       const response = await fetch(`https://api.myquran.com/v2/sholat/jadwal/0506/${year}/${month}/${date}`);
       const data = await response.json();
@@ -105,7 +105,6 @@
         isha: jadwal.isya,
       };
 
-      // Tampilkan waktu sholat
       document.getElementById("subuh").innerText = times.fajr;
       document.getElementById("terbit").innerText = times.sunrise;
       document.getElementById("zuhur").innerText = times.dhuhr;
@@ -113,7 +112,6 @@
       document.getElementById("maghrib").innerText = times.maghrib;
       document.getElementById("isya").innerText = times.isha;
 
-      // Highlight waktu aktif
       const highlight = (id, condition) => {
         document.getElementById(id).style.backgroundColor = condition ? "red" : "white";
       };
@@ -125,7 +123,6 @@
       highlight("cmaghrib", nowTime >= times.maghrib && nowTime < times.isha);
       highlight("cisya", nowTime >= times.isha);
 
-      // Modal Azan
       const waktuAzan = ['fajr', 'dhuhr', 'asr', 'maghrib', 'isha'];
       waktuAzan.forEach(w => {
         if (nowTime === times[w].slice(0, 5)) {
@@ -139,16 +136,13 @@
     }
   }
 
-  // Jalankan saat halaman selesai dimuat
   setInterval(waktuSholat, 1000);
-  window.onload = waktuSholat;
 </script>
 
 
 </head>
 
-<body onload="waktuSholat()">
-
+<body id="bg-body">
 <!-- Header -->
 <div class="header">
   <div class="row">
@@ -226,5 +220,6 @@
 
 </body>
 </html>
+
 
 
