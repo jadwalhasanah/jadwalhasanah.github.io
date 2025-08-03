@@ -18,8 +18,7 @@
 
 
   window.onload = function () {
-    showSlide(0);
-    waktuSholat();
+   waktuSholat();
   };
    
   function checkTime(i) {
@@ -217,7 +216,7 @@
       if (i === index) slide.classList.add('active');
     });
   }
-
+ showSlide(0);
   setInterval(() => {
     currentSlide = (currentSlide + 1) % slides.length;
     showSlide(currentSlide);
@@ -225,6 +224,7 @@
 </script>
 </body>
 </html>
+
 
 
 
