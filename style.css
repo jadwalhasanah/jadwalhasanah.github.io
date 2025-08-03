@@ -79,6 +79,7 @@ h1, h2, h3, h4, h5, h6 {
   border-top: 3px solid #fff;
   margin: 10px 0;
   width: 50%;
+}
 .jam2 {
 	font-size: 55px;
 	font-family: digital7;
@@ -90,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
 	border-radius: 12px;
 }
 
-<!-- Modal -->
+/* Modal */
  .modal-content{
  	background-color: #0f0;
     color:white;
@@ -102,5 +103,6 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 30px;
   }
   
+
 
 
