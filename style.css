@@ -14,14 +14,28 @@ body {
   width: 100vw;
   z-index: -1;
 }
+.bg-slider {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+}
 
 .bg-slide {
   position: absolute;
-  height: 100%;
   width: 100%;
+  height: 100%;
   object-fit: cover;
   opacity: 0;
-  animation: fadeSlider 48s infinite;
+  transition: opacity 2s ease-in-out;
+}
+
+.bg-slide.active {
+  opacity: 1;
+  z-index: 1;
 }
 
 /* Fade effect */
@@ -141,6 +155,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 30px;
   }
   
+
 
 
 
