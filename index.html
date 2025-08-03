@@ -136,12 +136,26 @@
   }
 
   setInterval(waktuSholat, 1000);
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.bg-slide');
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      if (i === index) slide.classList.add('active');
+    });
+  }
+
+  setInterval(() => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }, 8000); // Ganti gambar setiap 8 detik
 </script>
 
 </head>
 <body id="bg-body">
  <div class="bg-slider">
-  <img src="bg1.jpg" class="bg-slide">
+  <img src="main-bg.jpg" class="bg-slide">
   <img src="bg2.jpg" class="bg-slide">
   <img src="bg3.jpg" class="bg-slide">
   <img src="bg4.jpg" class="bg-slide">
@@ -226,6 +240,7 @@
 
 </body>
 </html>
+
 
 
 
