@@ -6,6 +6,45 @@ body {
   cursor: none; /* hide cursor */
 }
 
+.bg-slider {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+
+.bg-slide {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: fadeSlider 48s infinite;
+}
+
+/* Fade effect */
+.bg-slide:nth-child(1) { animation-delay: 0s; }
+.bg-slide:nth-child(2) { animation-delay: 8s; }
+.bg-slide:nth-child(3) { animation-delay: 16s; }
+.bg-slide:nth-child(4) { animation-delay: 24s; }
+.bg-slide:nth-child(5) { animation-delay: 32s; }
+.bg-slide:nth-child(6) { animation-delay: 40s; }
+
+@keyframes fadeSlider {
+  0% { opacity: 0; }
+  8% { opacity: 1; }
+  25% { opacity: 1; }
+  33% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* Konten utama tetap tampil di atas */
+.konten-utama {
+  position: relative;
+  z-index: 10;
+}
 h1, h2, h3, h4, h5, h6 {
   color: #000;
 }
@@ -102,6 +141,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 30px;
   }
   
+
 
 
 
