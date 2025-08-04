@@ -122,7 +122,7 @@
 </script>
 
 </head>
-<body id="bg-body">
+<body>
  <div class="bg-slider">
   <img src="main-bg.jpg" class="bg-slide">
   <img src="bg2.jpg" class="bg-slide">
@@ -130,7 +130,7 @@
   <img src="bg4.jpg" class="bg-slide">
   <img src="bg5.jpg" class="bg-slide">
   <img src="bg6.jpg" class="bg-slide">
-</div>
+ </div>
   
 <!-- Header -->
 <div class="header">
@@ -216,14 +216,17 @@
       if (i === index) slide.classList.add('active');
     });
   }
- showSlide(0);
+
+  showSlide(0);
+
   setInterval(() => {
     currentSlide = (currentSlide + 1) % slides.length;
     showSlide(currentSlide);
-  }, 8000); // Ganti setiap 8 detik
+  }, 8000); // Ganti gambar setiap 8 detik
 </script>
 </body>
 </html>
+
 
 
 
