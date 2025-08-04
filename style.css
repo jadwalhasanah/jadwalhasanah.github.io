@@ -28,6 +28,7 @@ body, html {
 
 .bg-slide.active {
   opacity: 1;
+  z-index: 1; /* <- Tambahkan ini */
 }
 
 /* Konten utama tetap tampil di atas */
@@ -131,6 +132,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 30px;
   }
   
+
 
 
 
