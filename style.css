@@ -4,7 +4,7 @@ body, html {
   height: 100%;
   overflow: hidden;
   cursor: none; /* Sembunyikan kursor */
-  background-image: url('img/main-bg.jpg'); /* Ganti dengan nama file kamu */
+  background-image: url('img/bg6.jpg'); /* Ganti dengan nama file kamu */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -112,6 +112,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 30px;
   }
   
+
 
 
 
