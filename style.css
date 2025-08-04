@@ -3,45 +3,12 @@ body, html {
   padding: 0;
   height: 100%;
   overflow: hidden;
-  cursor: none;
-}
-
-.background-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  z-index: -1;
-}
-
-.bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+  cursor: none; /* Sembunyikan kursor */
+  background-image: url('img/main-bg.jpg'); /* Ganti dengan nama file kamu */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0;
-  animation: fadeBg 36s infinite;
-  transition: opacity 2s ease-in-out;
-}
-
-.bg1 { background-image: url('img/main-bg.jpg'); animation-delay: 0s; }
-.bg2 { background-image: url('img/bg2.jpg'); animation-delay: 6s; }
-.bg3 { background-image: url('img/bg3.jpg'); animation-delay: 12s; }
-.bg4 { background-image: url('img/bg4.jpg'); animation-delay: 18s; }
-.bg5 { background-image: url('img/bg5.jpg'); animation-delay: 24s; }
-.bg6 { background-image: url('img/bg6.jpg'); animation-delay: 30s; }
-
-@keyframes fadeBg {
-  0%   { opacity: 0; }
-  8%   { opacity: 1; }
-  16%  { opacity: 1; }
-  25%  { opacity: 0; }
-  100% { opacity: 0; }
+  background-attachment: fixed;
 }
 
 /* Konten tetap tampil di atas */
@@ -145,6 +112,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 30px;
   }
   
+
 
 
 
