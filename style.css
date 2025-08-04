@@ -3,7 +3,7 @@ body, html {
   padding: 0;
   height: 100%;
   overflow: hidden;
-  cursor: none; /* Sembunyikan mouse */
+  cursor: none; /* sembunyikan kursor */
 }
 
 .bg-slider {
@@ -22,15 +22,12 @@ body, html {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  opacity: 0;
-  transition: opacity 2s ease-in-out;
+  display: none;
 }
 
 .bg-slide.active {
-  opacity: 1;
-  z-index: 1; /* <- Tambahkan ini */
+  display: block;
 }
-
 /* Konten utama tetap tampil di atas */
 .konten-utama {
   position: relative;
@@ -132,6 +129,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 30px;
   }
   
+
 
 
 
