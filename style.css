@@ -1,20 +1,18 @@
-body {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
   cursor: none; /* hide cursor */
 }
-
 
 .bg-slider {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   z-index: -1;
-  overflow: hidden;
 }
 
 .bg-slide {
@@ -23,12 +21,11 @@ body {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 2s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
 .bg-slide.active {
   opacity: 1;
-  z-index: 1;
 }
 
 /* Konten utama tetap tampil di atas */
@@ -132,6 +129,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 30px;
   }
   
+
 
 
 
