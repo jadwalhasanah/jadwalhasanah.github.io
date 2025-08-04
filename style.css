@@ -10,10 +10,9 @@ body, html {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   z-index: -1;
-  overflow: hidden;
 }
 
 .bg {
@@ -24,11 +23,12 @@ body, html {
   width: 100%;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   opacity: 0;
-  animation: fade 36s infinite;
+  animation: fadeBg 36s infinite;
+  transition: opacity 2s ease-in-out;
 }
 
-/* Total durasi: 36s → 6 gambar × 6 detik */
 .bg1 { background-image: url('img/main-bg.jpg'); animation-delay: 0s; }
 .bg2 { background-image: url('img/bg2.jpg'); animation-delay: 6s; }
 .bg3 { background-image: url('img/bg3.jpg'); animation-delay: 12s; }
@@ -36,11 +36,11 @@ body, html {
 .bg5 { background-image: url('img/bg5.jpg'); animation-delay: 24s; }
 .bg6 { background-image: url('img/bg6.jpg'); animation-delay: 30s; }
 
-@keyframes fade {
+@keyframes fadeBg {
   0%   { opacity: 0; }
-  5%   { opacity: 1; }
-  25%  { opacity: 1; }
-  30%  { opacity: 0; }
+  8%   { opacity: 1; }
+  16%  { opacity: 1; }
+  25%  { opacity: 0; }
   100% { opacity: 0; }
 }
 
@@ -145,6 +145,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 30px;
   }
   
+
 
 
 
