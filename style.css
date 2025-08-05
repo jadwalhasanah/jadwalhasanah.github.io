@@ -17,7 +17,7 @@ body, html {
   z-index: 10;
 }
 h1, h2, h3, h4, h5, h6 {
-  color: #fff;
+  color: white;
   user-select: none;
 }
 
@@ -88,7 +88,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .col-sm {
   background-color: rgba(0, 0, 0, 0.5); /* latar hitam transparan */
-  color: white;
+  color: black;
   padding: 20px;
   border-radius: 12px;
   text-align: center;
@@ -107,6 +107,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 30px;
   }
   
+
 
 
 
