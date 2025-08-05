@@ -55,11 +55,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer {
+  background-color: #000;
   padding: 10px;
   text-align: center;
   position:fixed;
-  bottom:10px;
+  bottom:5px;
   width:100%;
+  opacity:0.7;
 }
 
 .jam {
@@ -71,14 +73,6 @@ h1, h2, h3, h4, h5, h6 {
    	user-select: none;
    	opacity:1;
 }
-
-.hari {
-  	font-size: 35px;
-  	text-shadow: 0 0 8px #fff;
-   	color: #fff;
-   	user-select: none;
-}
-
 .tanggal {
   	font-size: 25px;
   	text-shadow: 0 0 8px #fff;
@@ -94,9 +88,6 @@ h1, h2, h3, h4, h5, h6 {
 .jam2 {
 	font-size: 45px;
 	font-family: digital7;
-}
-.container-fluid {
-  background-color: transparent;
 }
 .col-sm {
 	  box-shadow: 0 34px 28px 0 rgba(0, 0, 0, 0.2), 0 26px 20px 0 rgba(0, 0, 0, 0.19);
@@ -116,6 +107,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 30px;
   }
   
+
 
 
 
