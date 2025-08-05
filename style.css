@@ -17,7 +17,7 @@ body, html {
   z-index: 10;
 }
 h1, h2, h3, h4, h5, h6 {
-  color: #000;
+  color: #fff;
   user-select: none;
 }
 
@@ -87,9 +87,12 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 45px;
 }
 .col-sm {
-	  box-shadow: 0 34px 28px 0 rgba(0, 0, 0, 0.2), 0 26px 20px 0 rgba(0, 0, 0, 0.19);
-
-	border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.5); /* latar hitam transparan */
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
 /* Modal */
@@ -104,6 +107,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 30px;
   }
   
+
 
 
 
