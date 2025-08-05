@@ -17,7 +17,9 @@ body, html {
   z-index: 10;
 }
 h1, h2, h3, h4, h5, h6 {
-  color: #000;
+  color: #fff;
+  text-shadow: 0 0 8px #fff;
+  user-select: none;
 }
 
 @font-face {
@@ -114,6 +116,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 30px;
   }
   
+
 
 
 
