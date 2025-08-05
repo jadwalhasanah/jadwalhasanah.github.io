@@ -55,7 +55,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer {
-  background-color: #000;
+  background-color: transparent;
   padding: 10px;
   text-align: center;
   position:fixed;
@@ -107,6 +107,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 30px;
   }
   
+
 
 
 
