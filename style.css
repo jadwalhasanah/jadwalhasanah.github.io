@@ -93,7 +93,9 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 45px;
 	font-family: digital7;
 }
-
+.container-fluid {
+  background-color: transparent;
+}
 .col-sm {
 	  box-shadow: 0 34px 28px 0 rgba(0, 0, 0, 0.2), 0 26px 20px 0 rgba(0, 0, 0, 0.19);
 
@@ -112,6 +114,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 30px;
   }
   
+
 
 
 
