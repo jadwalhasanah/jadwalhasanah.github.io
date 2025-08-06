@@ -1,24 +1,53 @@
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: hidden;
-  cursor: none; /* Sembunyikan kursor */
-  background-image: url('img/bg6.jpg'); /* Ganti dengan nama file kamu */
-  background-size: cover;
-  background-position: center;
+body {
   background-repeat: no-repeat;
+  background-position: center;
   background-attachment: fixed;
+  background-size: cover;
+  cursor: none; /* hide cursor */
 }
 
-/* Konten tetap tampil di atas */
+.bg-slider {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+
+.bg-slide {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: fadeSlider 120s infinite;
+}
+
+/* Fade effect */
+.bg-slide:nth-child(1) { animation-delay: 0s; }
+.bg-slide:nth-child(2) { animation-delay: 20s; }
+.bg-slide:nth-child(3) { animation-delay: 40s; }
+.bg-slide:nth-child(4) { animation-delay: 60s; }
+.bg-slide:nth-child(5) { animation-delay: 80s; }
+.bg-slide:nth-child(6) { animation-delay: 100s; }
+
+@keyframes fadeSlider {
+  0% { opacity: 0; }
+  8% { opacity: 1; }
+  25% { opacity: 1; }
+  33% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* Konten utama tetap tampil di atas */
 .konten-utama {
   position: relative;
   z-index: 10;
 }
 h1, h2, h3, h4, h5, h6 {
-  color: white;
-  user-select: none;
+  color: #fff;
+  text-shadow: 0 0 3px #000,0 0 5px #000;
 }
 
 @font-face {
@@ -27,10 +56,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header {
-  background-color: #000;
   padding: 10px 40px;
   text-align: center;
-  opacity:0.7;
+
+ 
+
 }
 .tanggal-tengah {
   display: flex;
@@ -44,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 .hijriah {
   font-size: clamp(30px, 2.2vw, 30px);
   color: #fff;
-  text-shadow: 0 0 8px #fff;
+  text-shadow: 0 0 3px #000,0 0 5px #000;
   user-select: none;
 }
 .isi {
@@ -57,54 +87,61 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px;
   text-align: center;
   position:fixed;
-  bottom:5px;
+  bottom:10px;
   width:100%;
 }
 
 .jam {
   	font-size: 75px;
   	font-family: digital7;
-  	text-shadow: 0 0 20px #fff;
+  	text-shadow: 0 0 3px #000,0 0 5px #000;
   	letter-spacing: 5px;
    	color: #fff;
    	user-select: none;
    	opacity:1;
 }
+
+.hari {
+  	font-size: 35px;
+  	text-shadow: 0 0 8px #fff;
+   	color: #fff;
+   	user-select: none;
+}
+
 .tanggal {
   	font-size: 25px;
-  	text-shadow: 0 0 8px #fff;
+  	text-shadow: 0 0 3px #000,0 0 5px #000;
    	color: #fff;
    	user-select: none;
 }
 .hr-garis {
   border: none;
   border-top: 3px solid #fff;
+  box-shadow: 0 0 3px #000,0 0 5px #000;
   margin: 10px 0;
   width: 50%;
 }
 .jam2 {
-  font-size: 45px;
+	font-size: 35px;
+	text-shadow: 0 0 3px #000,0 0 5px #000;
+        
 }
+
 .col-sm {
-  background-color: rgba(0, 0, 0, 0.5); /* latar hitam transparan */
-  color: white;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    background-color: rgba(0.0.0.0.1);
+    color:white;
+    text-align: center;
+   
 }
 
 /* Modal */
  .modal-content{
  	background-color: #0f0;
-	 color: white;
+    color:white;
  }
  .modal-header{
-    background-color: #0f0;
+ 	background-color: #0f0;
     color:white;
     text-align: center;
     font-size: 30px;
   }
-  
-
-
