@@ -46,7 +46,7 @@ body {
   z-index: 10;
 }
 h1, h2, h3, h4, h5, h6 {
-  color: #fff;
+  color: #000;
   text-shadow: 0 0 3px #000,0 0 5px #000;
 }
 
@@ -58,6 +58,8 @@ h1, h2, h3, h4, h5, h6 {
 .header {
   padding: 10px 40px;
   text-align: center;
+  background-color: black;
+  opacity: 0.5;
 
  
 
@@ -123,7 +125,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .jam2 {
 	font-size: 35px;
-	text-shadow: 0 0 3px #000,0 0 5px #000;
+	text-shadow: 0 0 3px #fff,0 0 5px #fff;
+	color:000;
         
 }
 
@@ -145,3 +148,4 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     font-size: 30px;
   }
+
