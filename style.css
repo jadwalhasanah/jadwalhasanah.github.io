@@ -50,6 +50,21 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: 0 0 3px #fff,0 0 5px #fff;
 }
 
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+  }
+
+.kedip {
+animation:blink 3s infinite;
+}
+
+h6 {
+font-size: 2rem;
+  color: #fff;
+text-align: center;
+ }
+
 @font-face {
   font-family: digital7;
   src: url(digital-7.woff);
@@ -145,6 +160,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     font-size: 30px;
   }
+
 
 
 
