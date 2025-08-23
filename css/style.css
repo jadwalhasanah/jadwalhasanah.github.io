@@ -45,15 +45,23 @@ body {
   position: relative;
   z-index: 10;
 }
-h1, h2, h3, h4, h5{
+h1, h2, h3, h4, h5 {
   color: #000;
-  text-shadow: 0 0 3px #fff,0 0 5px #fff;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+  }
+
+.kedip {
+animation:blink 4s infinite;
 }
 
 h6 {
-font-size: 1.2rem;
+font-size: 2rem;
   color: #fff;
-text-align: center;
+text-align: left;
  }
 
 @font-face {
@@ -62,26 +70,28 @@ text-align: center;
 }
 
 .header {
-  padding: 10px 40px;
-  text-align: center;
-  background-color: black;
+  position: relative;
+  padding: 10px 20px;
+    z-index: 1;
+   background-color: black;
   opacity: 0.7;
+  text-align: center;
+  }
 
- 
-
-}
+    
 .tanggal-tengah {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+   text-align: center;
+
 }
 
 .tanggal,
 .hijriah {
   font-size: clamp(30px, 2.2vw, 30px);
   color: #fff;
+  text-shadow: 0 0 3px #000,0 0 5px #000;
   user-select: none;
 }
 .isi {
@@ -99,44 +109,42 @@ text-align: center;
 }
 
 .jam {
-  	font-size: 75px;
+  	font-size: 10rem;
   	font-family: digital7;
+  	text-shadow: 0 0 3px #000,0 0 5px #000;
   	letter-spacing: 5px;
-   	color: #fff;
-   	user-select: none;
-   	opacity:1;
+        color: #fff;
+        position:absolute;
+        top: 2;
+        text-align: center;
+        left: 10%
+     
 }
 
-.hari {
-  	font-size: 35px;
-  	text-shadow: 0 0 8px #fff;
-   	color: #fff;
-   	user-select: none;
-}
 
 .tanggal {
-  	font-size: 25px;
+  	font-size: 1.7rem;
+  	text-shadow: 0 0 3px #000,0 0 5px #000;
    	color: #fff;
    	user-select: none;
+        text-align: left;
 }
 .hr-garis {
   border: none;
   border-top: 3px solid #fff;
-  margin: 10px 0;
-  width: 50%;
+  box-shadow: 0 0 3px #000,0 0 5px #000;
+  margin: 15px 0;
+  width: 100%;
 }
 .jam2 {
-	font-size: 35px;
-	text-shadow: 0 0 3px #fff,0 0 5px #fff;
-	color:000;
-        
+	font-size: 35px;        
 }
 
 .col-sm {
     background-color: rgba(0.0.0.0.1);
     color:white;
     text-align: center;
-	border-radius: 25px;
+    border-radius:25px
    
 }
 
@@ -151,16 +159,3 @@ text-align: center;
     text-align: center;
     font-size: 30px;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
