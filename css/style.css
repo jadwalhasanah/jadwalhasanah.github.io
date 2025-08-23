@@ -59,7 +59,7 @@ animation:blink 4s infinite;
 }
 
 h6 {
-font-size: 1rem;
+font-size: 1.5rem;
   color: #fff;
 text-align: left;
  }
@@ -123,7 +123,7 @@ text-align: left;
 
 
 .tanggal {
-  	font-size: 1rem;
+  	font-size: 1.5rem;
   	text-shadow: 0 0 3px #000,0 0 5px #000;
    	color: #fff;
    	user-select: none;
@@ -159,4 +159,5 @@ text-align: left;
     text-align: center;
     font-size: 30px;
   }
+
 
