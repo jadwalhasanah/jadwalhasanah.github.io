@@ -83,7 +83,8 @@ text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: center;
-   text-align: center;
+  text-align: center;
+  position:relative;
 
 }
 
@@ -104,8 +105,9 @@ text-align: left;
   padding: 10px;
   text-align: center;
   position:fixed;
-  bottom:10px;
+  bottom:60px;
   width:100%;
+  z-index:1000;
 }
 
 .jam {
@@ -114,10 +116,11 @@ text-align: left;
   	text-shadow: 0 0 3px #000,0 0 5px #000;
   	letter-spacing: 5px;
         color: #fff;
-        position:absolute;
-        top: 2;
+        position:fixed;
+        top: -40px;
         text-align: center;
-        left: 1%
+        left: 70%
+        transfrom: translateX(-50%);
      
 }
 
@@ -161,5 +164,40 @@ text-align: left;
   }
 
 
+.running-text {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  overflow: hidden;
+  z-index: 9999;
+  height: 55px;
+  display: flex;
+  align-items: center;
+}
+
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 60s linear infinite;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
 
